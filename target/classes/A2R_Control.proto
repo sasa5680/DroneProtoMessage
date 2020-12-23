@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "sasa5680.DroneProtoMessages";
+message A2R_Control{
+
+	bool Fitch_F = 1;
+	bool Fitch_B = 2;
+	bool Roll_L	 = 3;
+	bool Roll_R  = 4;
+	bool Yaw_C	 = 5;
+	bool Yaw_CC	 = 6;
+	
+	bool Throttle_Up 	= 7;
+	bool Throttle_Donw  = 8;
+}
