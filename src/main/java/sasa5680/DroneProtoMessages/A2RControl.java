@@ -19,29 +19,29 @@ public final class A2RControl {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool Fitch = 1;</code>
+     * <code>int32 Fitch = 1;</code>
      */
-    boolean getFitch();
+    int getFitch();
 
     /**
-     * <code>bool Roll = 2;</code>
+     * <code>int32 Roll = 2;</code>
      */
-    boolean getRoll();
+    int getRoll();
 
     /**
-     * <code>bool Yaw = 3;</code>
+     * <code>int32 Yaw = 3;</code>
      */
-    boolean getYaw();
+    int getYaw();
 
     /**
-     * <code>bool Throttle_dir = 4;</code>
+     * <code>int32 Throttle_dir = 4;</code>
      */
-    boolean getThrottleDir();
+    int getThrottleDir();
 
     /**
-     * <code>float Throttle_level = 5;</code>
+     * <code>int32 Throttle_level = 5;</code>
      */
-    float getThrottleLevel();
+    int getThrottleLevel();
   }
   /**
    * Protobuf type {@code A2R_Control}
@@ -56,11 +56,11 @@ public final class A2RControl {
       super(builder);
     }
     private A2R_Control() {
-      fitch_ = false;
-      roll_ = false;
-      yaw_ = false;
-      throttleDir_ = false;
-      throttleLevel_ = 0F;
+      fitch_ = 0;
+      roll_ = 0;
+      yaw_ = 0;
+      throttleDir_ = 0;
+      throttleLevel_ = 0;
     }
 
     @java.lang.Override
@@ -89,27 +89,27 @@ public final class A2RControl {
               break;
             case 8: {
 
-              fitch_ = input.readBool();
+              fitch_ = input.readInt32();
               break;
             }
             case 16: {
 
-              roll_ = input.readBool();
+              roll_ = input.readInt32();
               break;
             }
             case 24: {
 
-              yaw_ = input.readBool();
+              yaw_ = input.readInt32();
               break;
             }
             case 32: {
 
-              throttleDir_ = input.readBool();
+              throttleDir_ = input.readInt32();
               break;
             }
-            case 45: {
+            case 40: {
 
-              throttleLevel_ = input.readFloat();
+              throttleLevel_ = input.readInt32();
               break;
             }
             default: {
@@ -145,47 +145,47 @@ public final class A2RControl {
     }
 
     public static final int FITCH_FIELD_NUMBER = 1;
-    private boolean fitch_;
+    private int fitch_;
     /**
-     * <code>bool Fitch = 1;</code>
+     * <code>int32 Fitch = 1;</code>
      */
-    public boolean getFitch() {
+    public int getFitch() {
       return fitch_;
     }
 
     public static final int ROLL_FIELD_NUMBER = 2;
-    private boolean roll_;
+    private int roll_;
     /**
-     * <code>bool Roll = 2;</code>
+     * <code>int32 Roll = 2;</code>
      */
-    public boolean getRoll() {
+    public int getRoll() {
       return roll_;
     }
 
     public static final int YAW_FIELD_NUMBER = 3;
-    private boolean yaw_;
+    private int yaw_;
     /**
-     * <code>bool Yaw = 3;</code>
+     * <code>int32 Yaw = 3;</code>
      */
-    public boolean getYaw() {
+    public int getYaw() {
       return yaw_;
     }
 
     public static final int THROTTLE_DIR_FIELD_NUMBER = 4;
-    private boolean throttleDir_;
+    private int throttleDir_;
     /**
-     * <code>bool Throttle_dir = 4;</code>
+     * <code>int32 Throttle_dir = 4;</code>
      */
-    public boolean getThrottleDir() {
+    public int getThrottleDir() {
       return throttleDir_;
     }
 
     public static final int THROTTLE_LEVEL_FIELD_NUMBER = 5;
-    private float throttleLevel_;
+    private int throttleLevel_;
     /**
-     * <code>float Throttle_level = 5;</code>
+     * <code>int32 Throttle_level = 5;</code>
      */
-    public float getThrottleLevel() {
+    public int getThrottleLevel() {
       return throttleLevel_;
     }
 
@@ -203,20 +203,20 @@ public final class A2RControl {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fitch_ != false) {
-        output.writeBool(1, fitch_);
+      if (fitch_ != 0) {
+        output.writeInt32(1, fitch_);
       }
-      if (roll_ != false) {
-        output.writeBool(2, roll_);
+      if (roll_ != 0) {
+        output.writeInt32(2, roll_);
       }
-      if (yaw_ != false) {
-        output.writeBool(3, yaw_);
+      if (yaw_ != 0) {
+        output.writeInt32(3, yaw_);
       }
-      if (throttleDir_ != false) {
-        output.writeBool(4, throttleDir_);
+      if (throttleDir_ != 0) {
+        output.writeInt32(4, throttleDir_);
       }
-      if (throttleLevel_ != 0F) {
-        output.writeFloat(5, throttleLevel_);
+      if (throttleLevel_ != 0) {
+        output.writeInt32(5, throttleLevel_);
       }
       unknownFields.writeTo(output);
     }
@@ -227,25 +227,25 @@ public final class A2RControl {
       if (size != -1) return size;
 
       size = 0;
-      if (fitch_ != false) {
+      if (fitch_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, fitch_);
+          .computeInt32Size(1, fitch_);
       }
-      if (roll_ != false) {
+      if (roll_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, roll_);
+          .computeInt32Size(2, roll_);
       }
-      if (yaw_ != false) {
+      if (yaw_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, yaw_);
+          .computeInt32Size(3, yaw_);
       }
-      if (throttleDir_ != false) {
+      if (throttleDir_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, throttleDir_);
+          .computeInt32Size(4, throttleDir_);
       }
-      if (throttleLevel_ != 0F) {
+      if (throttleLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, throttleLevel_);
+          .computeInt32Size(5, throttleLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -271,10 +271,8 @@ public final class A2RControl {
           == other.getYaw());
       result = result && (getThrottleDir()
           == other.getThrottleDir());
-      result = result && (
-          java.lang.Float.floatToIntBits(getThrottleLevel())
-          == java.lang.Float.floatToIntBits(
-              other.getThrottleLevel()));
+      result = result && (getThrottleLevel()
+          == other.getThrottleLevel());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -287,20 +285,15 @@ public final class A2RControl {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FITCH_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getFitch());
+      hash = (53 * hash) + getFitch();
       hash = (37 * hash) + ROLL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getRoll());
+      hash = (53 * hash) + getRoll();
       hash = (37 * hash) + YAW_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getYaw());
+      hash = (53 * hash) + getYaw();
       hash = (37 * hash) + THROTTLE_DIR_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getThrottleDir());
+      hash = (53 * hash) + getThrottleDir();
       hash = (37 * hash) + THROTTLE_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getThrottleLevel());
+      hash = (53 * hash) + getThrottleLevel();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -434,15 +427,15 @@ public final class A2RControl {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        fitch_ = false;
+        fitch_ = 0;
 
-        roll_ = false;
+        roll_ = 0;
 
-        yaw_ = false;
+        yaw_ = 0;
 
-        throttleDir_ = false;
+        throttleDir_ = 0;
 
-        throttleLevel_ = 0F;
+        throttleLevel_ = 0;
 
         return this;
       }
@@ -523,19 +516,19 @@ public final class A2RControl {
 
       public Builder mergeFrom(sasa5680.DroneProtoMessages.A2RControl.A2R_Control other) {
         if (other == sasa5680.DroneProtoMessages.A2RControl.A2R_Control.getDefaultInstance()) return this;
-        if (other.getFitch() != false) {
+        if (other.getFitch() != 0) {
           setFitch(other.getFitch());
         }
-        if (other.getRoll() != false) {
+        if (other.getRoll() != 0) {
           setRoll(other.getRoll());
         }
-        if (other.getYaw() != false) {
+        if (other.getYaw() != 0) {
           setYaw(other.getYaw());
         }
-        if (other.getThrottleDir() != false) {
+        if (other.getThrottleDir() != 0) {
           setThrottleDir(other.getThrottleDir());
         }
-        if (other.getThrottleLevel() != 0F) {
+        if (other.getThrottleLevel() != 0) {
           setThrottleLevel(other.getThrottleLevel());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -567,132 +560,132 @@ public final class A2RControl {
         return this;
       }
 
-      private boolean fitch_ ;
+      private int fitch_ ;
       /**
-       * <code>bool Fitch = 1;</code>
+       * <code>int32 Fitch = 1;</code>
        */
-      public boolean getFitch() {
+      public int getFitch() {
         return fitch_;
       }
       /**
-       * <code>bool Fitch = 1;</code>
+       * <code>int32 Fitch = 1;</code>
        */
-      public Builder setFitch(boolean value) {
+      public Builder setFitch(int value) {
         
         fitch_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Fitch = 1;</code>
+       * <code>int32 Fitch = 1;</code>
        */
       public Builder clearFitch() {
         
-        fitch_ = false;
+        fitch_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean roll_ ;
+      private int roll_ ;
       /**
-       * <code>bool Roll = 2;</code>
+       * <code>int32 Roll = 2;</code>
        */
-      public boolean getRoll() {
+      public int getRoll() {
         return roll_;
       }
       /**
-       * <code>bool Roll = 2;</code>
+       * <code>int32 Roll = 2;</code>
        */
-      public Builder setRoll(boolean value) {
+      public Builder setRoll(int value) {
         
         roll_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Roll = 2;</code>
+       * <code>int32 Roll = 2;</code>
        */
       public Builder clearRoll() {
         
-        roll_ = false;
+        roll_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean yaw_ ;
+      private int yaw_ ;
       /**
-       * <code>bool Yaw = 3;</code>
+       * <code>int32 Yaw = 3;</code>
        */
-      public boolean getYaw() {
+      public int getYaw() {
         return yaw_;
       }
       /**
-       * <code>bool Yaw = 3;</code>
+       * <code>int32 Yaw = 3;</code>
        */
-      public Builder setYaw(boolean value) {
+      public Builder setYaw(int value) {
         
         yaw_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Yaw = 3;</code>
+       * <code>int32 Yaw = 3;</code>
        */
       public Builder clearYaw() {
         
-        yaw_ = false;
+        yaw_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean throttleDir_ ;
+      private int throttleDir_ ;
       /**
-       * <code>bool Throttle_dir = 4;</code>
+       * <code>int32 Throttle_dir = 4;</code>
        */
-      public boolean getThrottleDir() {
+      public int getThrottleDir() {
         return throttleDir_;
       }
       /**
-       * <code>bool Throttle_dir = 4;</code>
+       * <code>int32 Throttle_dir = 4;</code>
        */
-      public Builder setThrottleDir(boolean value) {
+      public Builder setThrottleDir(int value) {
         
         throttleDir_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Throttle_dir = 4;</code>
+       * <code>int32 Throttle_dir = 4;</code>
        */
       public Builder clearThrottleDir() {
         
-        throttleDir_ = false;
+        throttleDir_ = 0;
         onChanged();
         return this;
       }
 
-      private float throttleLevel_ ;
+      private int throttleLevel_ ;
       /**
-       * <code>float Throttle_level = 5;</code>
+       * <code>int32 Throttle_level = 5;</code>
        */
-      public float getThrottleLevel() {
+      public int getThrottleLevel() {
         return throttleLevel_;
       }
       /**
-       * <code>float Throttle_level = 5;</code>
+       * <code>int32 Throttle_level = 5;</code>
        */
-      public Builder setThrottleLevel(float value) {
+      public Builder setThrottleLevel(int value) {
         
         throttleLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>float Throttle_level = 5;</code>
+       * <code>int32 Throttle_level = 5;</code>
        */
       public Builder clearThrottleLevel() {
         
-        throttleLevel_ = 0F;
+        throttleLevel_ = 0;
         onChanged();
         return this;
       }
@@ -764,9 +757,9 @@ public final class A2RControl {
   static {
     java.lang.String[] descriptorData = {
       "\n\021A2R_Control.proto\"e\n\013A2R_Control\022\r\n\005Fi" +
-      "tch\030\001 \001(\010\022\014\n\004Roll\030\002 \001(\010\022\013\n\003Yaw\030\003 \001(\010\022\024\n\014" +
-      "Throttle_dir\030\004 \001(\010\022\026\n\016Throttle_level\030\005 \001" +
-      "(\002B\035\n\033sasa5680.DroneProtoMessagesb\006proto" +
+      "tch\030\001 \001(\005\022\014\n\004Roll\030\002 \001(\005\022\013\n\003Yaw\030\003 \001(\005\022\024\n\014" +
+      "Throttle_dir\030\004 \001(\005\022\026\n\016Throttle_level\030\005 \001" +
+      "(\005B\035\n\033sasa5680.DroneProtoMessagesb\006proto" +
       "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
