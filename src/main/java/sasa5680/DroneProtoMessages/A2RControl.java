@@ -34,9 +34,14 @@ public final class A2RControl {
     boolean getYaw();
 
     /**
-     * <code>bool Throttle = 4;</code>
+     * <code>bool Throttle_dir = 4;</code>
      */
-    boolean getThrottle();
+    boolean getThrottleDir();
+
+    /**
+     * <code>float Throttle_level = 5;</code>
+     */
+    float getThrottleLevel();
   }
   /**
    * Protobuf type {@code A2R_Control}
@@ -54,7 +59,8 @@ public final class A2RControl {
       fitch_ = false;
       roll_ = false;
       yaw_ = false;
-      throttle_ = false;
+      throttleDir_ = false;
+      throttleLevel_ = 0F;
     }
 
     @java.lang.Override
@@ -98,7 +104,12 @@ public final class A2RControl {
             }
             case 32: {
 
-              throttle_ = input.readBool();
+              throttleDir_ = input.readBool();
+              break;
+            }
+            case 45: {
+
+              throttleLevel_ = input.readFloat();
               break;
             }
             default: {
@@ -160,13 +171,22 @@ public final class A2RControl {
       return yaw_;
     }
 
-    public static final int THROTTLE_FIELD_NUMBER = 4;
-    private boolean throttle_;
+    public static final int THROTTLE_DIR_FIELD_NUMBER = 4;
+    private boolean throttleDir_;
     /**
-     * <code>bool Throttle = 4;</code>
+     * <code>bool Throttle_dir = 4;</code>
      */
-    public boolean getThrottle() {
-      return throttle_;
+    public boolean getThrottleDir() {
+      return throttleDir_;
+    }
+
+    public static final int THROTTLE_LEVEL_FIELD_NUMBER = 5;
+    private float throttleLevel_;
+    /**
+     * <code>float Throttle_level = 5;</code>
+     */
+    public float getThrottleLevel() {
+      return throttleLevel_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -192,8 +212,11 @@ public final class A2RControl {
       if (yaw_ != false) {
         output.writeBool(3, yaw_);
       }
-      if (throttle_ != false) {
-        output.writeBool(4, throttle_);
+      if (throttleDir_ != false) {
+        output.writeBool(4, throttleDir_);
+      }
+      if (throttleLevel_ != 0F) {
+        output.writeFloat(5, throttleLevel_);
       }
       unknownFields.writeTo(output);
     }
@@ -216,9 +239,13 @@ public final class A2RControl {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, yaw_);
       }
-      if (throttle_ != false) {
+      if (throttleDir_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, throttle_);
+          .computeBoolSize(4, throttleDir_);
+      }
+      if (throttleLevel_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, throttleLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -242,8 +269,12 @@ public final class A2RControl {
           == other.getRoll());
       result = result && (getYaw()
           == other.getYaw());
-      result = result && (getThrottle()
-          == other.getThrottle());
+      result = result && (getThrottleDir()
+          == other.getThrottleDir());
+      result = result && (
+          java.lang.Float.floatToIntBits(getThrottleLevel())
+          == java.lang.Float.floatToIntBits(
+              other.getThrottleLevel()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -264,9 +295,12 @@ public final class A2RControl {
       hash = (37 * hash) + YAW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getYaw());
-      hash = (37 * hash) + THROTTLE_FIELD_NUMBER;
+      hash = (37 * hash) + THROTTLE_DIR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getThrottle());
+          getThrottleDir());
+      hash = (37 * hash) + THROTTLE_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getThrottleLevel());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -406,7 +440,9 @@ public final class A2RControl {
 
         yaw_ = false;
 
-        throttle_ = false;
+        throttleDir_ = false;
+
+        throttleLevel_ = 0F;
 
         return this;
       }
@@ -437,7 +473,8 @@ public final class A2RControl {
         result.fitch_ = fitch_;
         result.roll_ = roll_;
         result.yaw_ = yaw_;
-        result.throttle_ = throttle_;
+        result.throttleDir_ = throttleDir_;
+        result.throttleLevel_ = throttleLevel_;
         onBuilt();
         return result;
       }
@@ -495,8 +532,11 @@ public final class A2RControl {
         if (other.getYaw() != false) {
           setYaw(other.getYaw());
         }
-        if (other.getThrottle() != false) {
-          setThrottle(other.getThrottle());
+        if (other.getThrottleDir() != false) {
+          setThrottleDir(other.getThrottleDir());
+        }
+        if (other.getThrottleLevel() != 0F) {
+          setThrottleLevel(other.getThrottleLevel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -605,28 +645,54 @@ public final class A2RControl {
         return this;
       }
 
-      private boolean throttle_ ;
+      private boolean throttleDir_ ;
       /**
-       * <code>bool Throttle = 4;</code>
+       * <code>bool Throttle_dir = 4;</code>
        */
-      public boolean getThrottle() {
-        return throttle_;
+      public boolean getThrottleDir() {
+        return throttleDir_;
       }
       /**
-       * <code>bool Throttle = 4;</code>
+       * <code>bool Throttle_dir = 4;</code>
        */
-      public Builder setThrottle(boolean value) {
+      public Builder setThrottleDir(boolean value) {
         
-        throttle_ = value;
+        throttleDir_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Throttle = 4;</code>
+       * <code>bool Throttle_dir = 4;</code>
        */
-      public Builder clearThrottle() {
+      public Builder clearThrottleDir() {
         
-        throttle_ = false;
+        throttleDir_ = false;
+        onChanged();
+        return this;
+      }
+
+      private float throttleLevel_ ;
+      /**
+       * <code>float Throttle_level = 5;</code>
+       */
+      public float getThrottleLevel() {
+        return throttleLevel_;
+      }
+      /**
+       * <code>float Throttle_level = 5;</code>
+       */
+      public Builder setThrottleLevel(float value) {
+        
+        throttleLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float Throttle_level = 5;</code>
+       */
+      public Builder clearThrottleLevel() {
+        
+        throttleLevel_ = 0F;
         onChanged();
         return this;
       }
@@ -697,10 +763,11 @@ public final class A2RControl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021A2R_Control.proto\"I\n\013A2R_Control\022\r\n\005Fi" +
-      "tch\030\001 \001(\010\022\014\n\004Roll\030\002 \001(\010\022\013\n\003Yaw\030\003 \001(\010\022\020\n\010" +
-      "Throttle\030\004 \001(\010B\035\n\033sasa5680.DroneProtoMes" +
-      "sagesb\006proto3"
+      "\n\021A2R_Control.proto\"e\n\013A2R_Control\022\r\n\005Fi" +
+      "tch\030\001 \001(\010\022\014\n\004Roll\030\002 \001(\010\022\013\n\003Yaw\030\003 \001(\010\022\024\n\014" +
+      "Throttle_dir\030\004 \001(\010\022\026\n\016Throttle_level\030\005 \001" +
+      "(\002B\035\n\033sasa5680.DroneProtoMessagesb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -719,7 +786,7 @@ public final class A2RControl {
     internal_static_A2R_Control_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_A2R_Control_descriptor,
-        new java.lang.String[] { "Fitch", "Roll", "Yaw", "Throttle", });
+        new java.lang.String[] { "Fitch", "Roll", "Yaw", "ThrottleDir", "ThrottleLevel", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

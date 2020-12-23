@@ -9,6 +9,6 @@ message A2R_Control{
 
 	bool Yaw	 	= 3;
 	
-	bool Throttle 	= 4;
-
+	bool Throttle_dir 	= 4;
+	float Throttle_level = 5;
 }
