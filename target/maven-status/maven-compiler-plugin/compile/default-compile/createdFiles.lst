@@ -18,6 +18,7 @@ sasa5680\DroneProtoMessages\A2RVideoRequest.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$General$Builder.class
 sasa5680\DroneProtoMessages\GeneralOuterClass.class
 sasa5680\DroneProtoMessages\App.class
+Common\Pad.class
 sasa5680\DroneProtoMessages\A2RControl.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$General$1.class
 sasa5680\DroneProtoMessages\A2RControl$A2R_ControlOrBuilder.class
