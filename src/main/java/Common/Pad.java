@@ -17,4 +17,5 @@ public class Pad {
 	public static final byte Th_Down	= 2;
 
 	public static final float Th_Level_Multi = 10.0f;
+	
 }
