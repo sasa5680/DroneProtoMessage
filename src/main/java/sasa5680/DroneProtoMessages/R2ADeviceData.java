@@ -37,6 +37,16 @@ public final class R2ADeviceData {
      * <code>float battery = 3;</code>
      */
     float getBattery();
+
+    /**
+     * <code>string state = 4;</code>
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
   }
   /**
    * Protobuf type {@code R2A_DeviceData}
@@ -54,6 +64,7 @@ public final class R2ADeviceData {
       gPS_ = "";
       altitude_ = 0F;
       battery_ = 0F;
+      state_ = "";
     }
 
     @java.lang.Override
@@ -94,6 +105,12 @@ public final class R2ADeviceData {
             case 29: {
 
               battery_ = input.readFloat();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
               break;
             }
             default: {
@@ -180,6 +197,40 @@ public final class R2ADeviceData {
       return battery_;
     }
 
+    public static final int STATE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object state_;
+    /**
+     * <code>string state = 4;</code>
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -203,6 +254,9 @@ public final class R2ADeviceData {
       if (battery_ != 0F) {
         output.writeFloat(3, battery_);
       }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, state_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -222,6 +276,9 @@ public final class R2ADeviceData {
       if (battery_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, battery_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, state_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,6 +306,8 @@ public final class R2ADeviceData {
           java.lang.Float.floatToIntBits(getBattery())
           == java.lang.Float.floatToIntBits(
               other.getBattery()));
+      result = result && getState()
+          .equals(other.getState());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -268,6 +327,8 @@ public final class R2ADeviceData {
       hash = (37 * hash) + BATTERY_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getBattery());
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -407,6 +468,8 @@ public final class R2ADeviceData {
 
         battery_ = 0F;
 
+        state_ = "";
+
         return this;
       }
 
@@ -436,6 +499,7 @@ public final class R2ADeviceData {
         result.gPS_ = gPS_;
         result.altitude_ = altitude_;
         result.battery_ = battery_;
+        result.state_ = state_;
         onBuilt();
         return result;
       }
@@ -493,6 +557,10 @@ public final class R2ADeviceData {
         }
         if (other.getBattery() != 0F) {
           setBattery(other.getBattery());
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -643,6 +711,75 @@ public final class R2ADeviceData {
         onChanged();
         return this;
       }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 4;</code>
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 4;</code>
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -710,10 +847,10 @@ public final class R2ADeviceData {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024R2A_DeviceData.proto\"@\n\016R2A_DeviceData" +
+      "\n\024R2A_DeviceData.proto\"O\n\016R2A_DeviceData" +
       "\022\013\n\003GPS\030\001 \001(\t\022\020\n\010altitude\030\002 \001(\002\022\017\n\007batte" +
-      "ry\030\003 \001(\002B\035\n\033sasa5680.DroneProtoMessagesb" +
-      "\006proto3"
+      "ry\030\003 \001(\002\022\r\n\005state\030\004 \001(\tB\035\n\033sasa5680.Dron" +
+      "eProtoMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -732,7 +869,7 @@ public final class R2ADeviceData {
     internal_static_R2A_DeviceData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_R2A_DeviceData_descriptor,
-        new java.lang.String[] { "GPS", "Altitude", "Battery", });
+        new java.lang.String[] { "GPS", "Altitude", "Battery", "State", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

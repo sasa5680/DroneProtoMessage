@@ -61,6 +61,7 @@ sasa5680\DroneProtoMessages\GeneralOuterClass$1.class
 sasa5680\DroneProtoMessages\C2SIn$1.class
 sasa5680\DroneProtoMessages\R2ADeviceData.class
 sasa5680\DroneProtoMessages\A2RPing$1.class
+Common\State.class
 sasa5680\DroneProtoMessages\R2APong$R2A_PongOrBuilder.class
 sasa5680\DroneProtoMessages\R2APong.class
 A2RControl.class
