@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option java_package = "sasa5680.DroneProtoMessages";
+message A2R_TurnOff{
+	
+	bool dummy = 1;
+}

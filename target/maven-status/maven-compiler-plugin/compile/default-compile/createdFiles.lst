@@ -8,6 +8,7 @@ sasa5680\DroneProtoMessages\A2RTakeOff$A2R_TakeOff.class
 A2RTakeOff.class
 sasa5680\DroneProtoMessages\R2APong$R2A_Pong$Builder.class
 sasa5680\DroneProtoMessages\C2SOut$C2S_Out$1.class
+A2RTurnOff$1.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$General.class
 sasa5680\DroneProtoMessages\R2ADeviceData$1.class
 sasa5680\DroneProtoMessages\GeneralOuterClass.class
@@ -18,9 +19,11 @@ sasa5680\DroneProtoMessages\C2SConnectionFlag$C2S_ConnectionFlag$Builder.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$GeneralOrBuilder.class
 sasa5680\DroneProtoMessages\S2CClientIP$S2C_ClientIP.class
 sasa5680\DroneProtoMessages\R2AGoodToGo$R2A_GoodtoGo$Builder.class
+sasa5680\DroneProtoMessages\A2RTurnOff$A2R_TurnOff.class
 sasa5680\DroneProtoMessages\A2RTakeOff$A2R_TakeOffOrBuilder.class
 sasa5680\DroneProtoMessages\A2RExit.class
 sasa5680\DroneProtoMessages\C2SOut$C2S_OutOrBuilder.class
+sasa5680\DroneProtoMessages\A2RTurnOff.class
 Common\DeviceType.class
 sasa5680\DroneProtoMessages\A2RVideoRequest$VideoRQOrBuilder.class
 A2RControl$1.class
@@ -31,8 +34,10 @@ sasa5680\DroneProtoMessages\A2RPing$A2R_PingOrBuilder.class
 sasa5680\DroneProtoMessages\C2SConnectionFlag$1.class
 sasa5680\DroneProtoMessages\C2SOut$C2S_Out$Builder.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$1.class
+A2RTurnOff.class
 Common\State.class
 sasa5680\DroneProtoMessages\R2APong.class
+sasa5680\DroneProtoMessages\A2RTurnOff$1.class
 sasa5680\DroneProtoMessages\R2ADeviceData$R2A_DeviceData$1.class
 sasa5680\DroneProtoMessages\C2SIn$C2S_InOrBuilder.class
 sasa5680\DroneProtoMessages\A2RVideoRequest$VideoRQ$Builder.class
@@ -49,6 +54,7 @@ sasa5680\DroneProtoMessages\A2RPing$A2R_Ping.class
 sasa5680\DroneProtoMessages\S2CClientIP.class
 sasa5680\DroneProtoMessages\A2RPing$A2R_Ping$Builder.class
 sasa5680\DroneProtoMessages\C2SOut$1.class
+sasa5680\DroneProtoMessages\A2RTurnOff$A2R_TurnOffOrBuilder.class
 sasa5680\DroneProtoMessages\C2SConnectionFlag$C2S_ConnectionFlag$1.class
 sasa5680\DroneProtoMessages\A2RVideoRequest.class
 sasa5680\DroneProtoMessages\GeneralOuterClass$General$Builder.class
@@ -76,6 +82,7 @@ sasa5680\DroneProtoMessages\C2SIn$1.class
 sasa5680\DroneProtoMessages\R2ADeviceData.class
 sasa5680\DroneProtoMessages\A2RPing$1.class
 sasa5680\DroneProtoMessages\R2APong$R2A_PongOrBuilder.class
+sasa5680\DroneProtoMessages\A2RTurnOff$A2R_TurnOff$1.class
 A2RControl.class
 sasa5680\DroneProtoMessages\R2AGoodToGo$1.class
 sasa5680\DroneProtoMessages\A2RTakeOff.class
@@ -83,6 +90,7 @@ sasa5680\DroneProtoMessages\R2APong$R2A_Pong.class
 sasa5680\DroneProtoMessages\R2ADeviceData$R2A_DeviceData.class
 sasa5680\DroneProtoMessages\A2RTakeOff$1.class
 sasa5680\DroneProtoMessages\MessageWrapper.class
+sasa5680\DroneProtoMessages\A2RTurnOff$A2R_TurnOff$Builder.class
 sasa5680\DroneProtoMessages\R2AGoodToGo.class
 sasa5680\DroneProtoMessages\A2RVideoRequest$VideoRQ$1.class
 sasa5680\DroneProtoMessages\A2RVideoRequest$VideoRQ.class
