@@ -19,21 +19,41 @@ public final class R2ADeviceData {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>float altitude = 2;</code>
+     * <code>string GPS_Latitude = 1;</code>
+     */
+    java.lang.String getGPSLatitude();
+    /**
+     * <code>string GPS_Latitude = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getGPSLatitudeBytes();
+
+    /**
+     * <code>string GPS_Longitude = 2;</code>
+     */
+    java.lang.String getGPSLongitude();
+    /**
+     * <code>string GPS_Longitude = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getGPSLongitudeBytes();
+
+    /**
+     * <code>float altitude = 3;</code>
      */
     float getAltitude();
 
     /**
-     * <code>float battery = 3;</code>
+     * <code>float battery = 4;</code>
      */
     float getBattery();
 
     /**
-     * <code>string state = 4;</code>
+     * <code>string state = 5;</code>
      */
     java.lang.String getState();
     /**
-     * <code>string state = 4;</code>
+     * <code>string state = 5;</code>
      */
     com.google.protobuf.ByteString
         getStateBytes();
@@ -51,6 +71,8 @@ public final class R2ADeviceData {
       super(builder);
     }
     private R2A_DeviceData() {
+      gPSLatitude_ = "";
+      gPSLongitude_ = "";
       altitude_ = 0F;
       battery_ = 0F;
       state_ = "";
@@ -80,17 +102,29 @@ public final class R2ADeviceData {
             case 0:
               done = true;
               break;
-            case 21: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              altitude_ = input.readFloat();
+              gPSLatitude_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gPSLongitude_ = s;
               break;
             }
             case 29: {
 
+              altitude_ = input.readFloat();
+              break;
+            }
+            case 37: {
+
               battery_ = input.readFloat();
               break;
             }
-            case 34: {
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               state_ = s;
@@ -128,28 +162,96 @@ public final class R2ADeviceData {
               sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData.class, sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData.Builder.class);
     }
 
-    public static final int ALTITUDE_FIELD_NUMBER = 2;
+    public static final int GPS_LATITUDE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object gPSLatitude_;
+    /**
+     * <code>string GPS_Latitude = 1;</code>
+     */
+    public java.lang.String getGPSLatitude() {
+      java.lang.Object ref = gPSLatitude_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gPSLatitude_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string GPS_Latitude = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGPSLatitudeBytes() {
+      java.lang.Object ref = gPSLatitude_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gPSLatitude_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GPS_LONGITUDE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object gPSLongitude_;
+    /**
+     * <code>string GPS_Longitude = 2;</code>
+     */
+    public java.lang.String getGPSLongitude() {
+      java.lang.Object ref = gPSLongitude_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gPSLongitude_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string GPS_Longitude = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGPSLongitudeBytes() {
+      java.lang.Object ref = gPSLongitude_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gPSLongitude_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALTITUDE_FIELD_NUMBER = 3;
     private float altitude_;
     /**
-     * <code>float altitude = 2;</code>
+     * <code>float altitude = 3;</code>
      */
     public float getAltitude() {
       return altitude_;
     }
 
-    public static final int BATTERY_FIELD_NUMBER = 3;
+    public static final int BATTERY_FIELD_NUMBER = 4;
     private float battery_;
     /**
-     * <code>float battery = 3;</code>
+     * <code>float battery = 4;</code>
      */
     public float getBattery() {
       return battery_;
     }
 
-    public static final int STATE_FIELD_NUMBER = 4;
+    public static final int STATE_FIELD_NUMBER = 5;
     private volatile java.lang.Object state_;
     /**
-     * <code>string state = 4;</code>
+     * <code>string state = 5;</code>
      */
     public java.lang.String getState() {
       java.lang.Object ref = state_;
@@ -164,7 +266,7 @@ public final class R2ADeviceData {
       }
     }
     /**
-     * <code>string state = 4;</code>
+     * <code>string state = 5;</code>
      */
     public com.google.protobuf.ByteString
         getStateBytes() {
@@ -194,14 +296,20 @@ public final class R2ADeviceData {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getGPSLatitudeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gPSLatitude_);
+      }
+      if (!getGPSLongitudeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, gPSLongitude_);
+      }
       if (altitude_ != 0F) {
-        output.writeFloat(2, altitude_);
+        output.writeFloat(3, altitude_);
       }
       if (battery_ != 0F) {
-        output.writeFloat(3, battery_);
+        output.writeFloat(4, battery_);
       }
       if (!getStateBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, state_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, state_);
       }
       unknownFields.writeTo(output);
     }
@@ -212,16 +320,22 @@ public final class R2ADeviceData {
       if (size != -1) return size;
 
       size = 0;
+      if (!getGPSLatitudeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gPSLatitude_);
+      }
+      if (!getGPSLongitudeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, gPSLongitude_);
+      }
       if (altitude_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, altitude_);
+          .computeFloatSize(3, altitude_);
       }
       if (battery_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, battery_);
+          .computeFloatSize(4, battery_);
       }
       if (!getStateBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, state_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, state_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -239,6 +353,10 @@ public final class R2ADeviceData {
       sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData other = (sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData) obj;
 
       boolean result = true;
+      result = result && getGPSLatitude()
+          .equals(other.getGPSLatitude());
+      result = result && getGPSLongitude()
+          .equals(other.getGPSLongitude());
       result = result && (
           java.lang.Float.floatToIntBits(getAltitude())
           == java.lang.Float.floatToIntBits(
@@ -260,6 +378,10 @@ public final class R2ADeviceData {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GPS_LATITUDE_FIELD_NUMBER;
+      hash = (53 * hash) + getGPSLatitude().hashCode();
+      hash = (37 * hash) + GPS_LONGITUDE_FIELD_NUMBER;
+      hash = (53 * hash) + getGPSLongitude().hashCode();
       hash = (37 * hash) + ALTITUDE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAltitude());
@@ -401,6 +523,10 @@ public final class R2ADeviceData {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        gPSLatitude_ = "";
+
+        gPSLongitude_ = "";
+
         altitude_ = 0F;
 
         battery_ = 0F;
@@ -433,6 +559,8 @@ public final class R2ADeviceData {
       @java.lang.Override
       public sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData buildPartial() {
         sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData result = new sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData(this);
+        result.gPSLatitude_ = gPSLatitude_;
+        result.gPSLongitude_ = gPSLongitude_;
         result.altitude_ = altitude_;
         result.battery_ = battery_;
         result.state_ = state_;
@@ -484,6 +612,14 @@ public final class R2ADeviceData {
 
       public Builder mergeFrom(sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData other) {
         if (other == sasa5680.DroneProtoMessages.R2ADeviceData.R2A_DeviceData.getDefaultInstance()) return this;
+        if (!other.getGPSLatitude().isEmpty()) {
+          gPSLatitude_ = other.gPSLatitude_;
+          onChanged();
+        }
+        if (!other.getGPSLongitude().isEmpty()) {
+          gPSLongitude_ = other.gPSLongitude_;
+          onChanged();
+        }
         if (other.getAltitude() != 0F) {
           setAltitude(other.getAltitude());
         }
@@ -523,15 +659,153 @@ public final class R2ADeviceData {
         return this;
       }
 
+      private java.lang.Object gPSLatitude_ = "";
+      /**
+       * <code>string GPS_Latitude = 1;</code>
+       */
+      public java.lang.String getGPSLatitude() {
+        java.lang.Object ref = gPSLatitude_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gPSLatitude_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string GPS_Latitude = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGPSLatitudeBytes() {
+        java.lang.Object ref = gPSLatitude_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gPSLatitude_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string GPS_Latitude = 1;</code>
+       */
+      public Builder setGPSLatitude(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gPSLatitude_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string GPS_Latitude = 1;</code>
+       */
+      public Builder clearGPSLatitude() {
+        
+        gPSLatitude_ = getDefaultInstance().getGPSLatitude();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string GPS_Latitude = 1;</code>
+       */
+      public Builder setGPSLatitudeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gPSLatitude_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gPSLongitude_ = "";
+      /**
+       * <code>string GPS_Longitude = 2;</code>
+       */
+      public java.lang.String getGPSLongitude() {
+        java.lang.Object ref = gPSLongitude_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gPSLongitude_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string GPS_Longitude = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGPSLongitudeBytes() {
+        java.lang.Object ref = gPSLongitude_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gPSLongitude_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string GPS_Longitude = 2;</code>
+       */
+      public Builder setGPSLongitude(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gPSLongitude_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string GPS_Longitude = 2;</code>
+       */
+      public Builder clearGPSLongitude() {
+        
+        gPSLongitude_ = getDefaultInstance().getGPSLongitude();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string GPS_Longitude = 2;</code>
+       */
+      public Builder setGPSLongitudeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gPSLongitude_ = value;
+        onChanged();
+        return this;
+      }
+
       private float altitude_ ;
       /**
-       * <code>float altitude = 2;</code>
+       * <code>float altitude = 3;</code>
        */
       public float getAltitude() {
         return altitude_;
       }
       /**
-       * <code>float altitude = 2;</code>
+       * <code>float altitude = 3;</code>
        */
       public Builder setAltitude(float value) {
         
@@ -540,7 +814,7 @@ public final class R2ADeviceData {
         return this;
       }
       /**
-       * <code>float altitude = 2;</code>
+       * <code>float altitude = 3;</code>
        */
       public Builder clearAltitude() {
         
@@ -551,13 +825,13 @@ public final class R2ADeviceData {
 
       private float battery_ ;
       /**
-       * <code>float battery = 3;</code>
+       * <code>float battery = 4;</code>
        */
       public float getBattery() {
         return battery_;
       }
       /**
-       * <code>float battery = 3;</code>
+       * <code>float battery = 4;</code>
        */
       public Builder setBattery(float value) {
         
@@ -566,7 +840,7 @@ public final class R2ADeviceData {
         return this;
       }
       /**
-       * <code>float battery = 3;</code>
+       * <code>float battery = 4;</code>
        */
       public Builder clearBattery() {
         
@@ -577,7 +851,7 @@ public final class R2ADeviceData {
 
       private java.lang.Object state_ = "";
       /**
-       * <code>string state = 4;</code>
+       * <code>string state = 5;</code>
        */
       public java.lang.String getState() {
         java.lang.Object ref = state_;
@@ -592,7 +866,7 @@ public final class R2ADeviceData {
         }
       }
       /**
-       * <code>string state = 4;</code>
+       * <code>string state = 5;</code>
        */
       public com.google.protobuf.ByteString
           getStateBytes() {
@@ -608,7 +882,7 @@ public final class R2ADeviceData {
         }
       }
       /**
-       * <code>string state = 4;</code>
+       * <code>string state = 5;</code>
        */
       public Builder setState(
           java.lang.String value) {
@@ -621,7 +895,7 @@ public final class R2ADeviceData {
         return this;
       }
       /**
-       * <code>string state = 4;</code>
+       * <code>string state = 5;</code>
        */
       public Builder clearState() {
         
@@ -630,7 +904,7 @@ public final class R2ADeviceData {
         return this;
       }
       /**
-       * <code>string state = 4;</code>
+       * <code>string state = 5;</code>
        */
       public Builder setStateBytes(
           com.google.protobuf.ByteString value) {
@@ -710,10 +984,11 @@ public final class R2ADeviceData {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024R2A_DeviceData.proto\"B\n\016R2A_DeviceData" +
-      "\022\020\n\010altitude\030\002 \001(\002\022\017\n\007battery\030\003 \001(\002\022\r\n\005s" +
-      "tate\030\004 \001(\tB\035\n\033sasa5680.DroneProtoMessage" +
-      "sb\006proto3"
+      "\n\024R2A_DeviceData.proto\"o\n\016R2A_DeviceData" +
+      "\022\024\n\014GPS_Latitude\030\001 \001(\t\022\025\n\rGPS_Longitude\030" +
+      "\002 \001(\t\022\020\n\010altitude\030\003 \001(\002\022\017\n\007battery\030\004 \001(\002" +
+      "\022\r\n\005state\030\005 \001(\tB\035\n\033sasa5680.DroneProtoMe" +
+      "ssagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -732,7 +1007,7 @@ public final class R2ADeviceData {
     internal_static_R2A_DeviceData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_R2A_DeviceData_descriptor,
-        new java.lang.String[] { "Altitude", "Battery", "State", });
+        new java.lang.String[] { "GPSLatitude", "GPSLongitude", "Altitude", "Battery", "State", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

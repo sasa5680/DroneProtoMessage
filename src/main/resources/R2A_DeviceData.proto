@@ -3,7 +3,9 @@ syntax = "proto3";
 option java_package = "sasa5680.DroneProtoMessages";
 message R2A_DeviceData{
 	
-	float altitude  = 2;
-	float battery   = 3;
-	string state	= 4;
+	string GPS_Latitude  = 1;
+	string GPS_Longitude = 2;
+	float altitude  	 = 3;
+	float battery   	 = 4;
+	string state		 = 5;
 }
