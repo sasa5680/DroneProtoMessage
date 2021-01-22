@@ -19,9 +19,9 @@ public final class A2RControl {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 Fitch = 1;</code>
+     * <code>int32 Pitch = 1;</code>
      */
-    int getFitch();
+    int getPitch();
 
     /**
      * <code>int32 Roll = 2;</code>
@@ -56,7 +56,7 @@ public final class A2RControl {
       super(builder);
     }
     private A2R_Control() {
-      fitch_ = 0;
+      pitch_ = 0;
       roll_ = 0;
       yaw_ = 0;
       throttleDir_ = 0;
@@ -89,7 +89,7 @@ public final class A2RControl {
               break;
             case 8: {
 
-              fitch_ = input.readInt32();
+              pitch_ = input.readInt32();
               break;
             }
             case 16: {
@@ -144,13 +144,13 @@ public final class A2RControl {
               sasa5680.DroneProtoMessages.A2RControl.A2R_Control.class, sasa5680.DroneProtoMessages.A2RControl.A2R_Control.Builder.class);
     }
 
-    public static final int FITCH_FIELD_NUMBER = 1;
-    private int fitch_;
+    public static final int PITCH_FIELD_NUMBER = 1;
+    private int pitch_;
     /**
-     * <code>int32 Fitch = 1;</code>
+     * <code>int32 Pitch = 1;</code>
      */
-    public int getFitch() {
-      return fitch_;
+    public int getPitch() {
+      return pitch_;
     }
 
     public static final int ROLL_FIELD_NUMBER = 2;
@@ -203,8 +203,8 @@ public final class A2RControl {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fitch_ != 0) {
-        output.writeInt32(1, fitch_);
+      if (pitch_ != 0) {
+        output.writeInt32(1, pitch_);
       }
       if (roll_ != 0) {
         output.writeInt32(2, roll_);
@@ -227,9 +227,9 @@ public final class A2RControl {
       if (size != -1) return size;
 
       size = 0;
-      if (fitch_ != 0) {
+      if (pitch_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, fitch_);
+          .computeInt32Size(1, pitch_);
       }
       if (roll_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -263,8 +263,8 @@ public final class A2RControl {
       sasa5680.DroneProtoMessages.A2RControl.A2R_Control other = (sasa5680.DroneProtoMessages.A2RControl.A2R_Control) obj;
 
       boolean result = true;
-      result = result && (getFitch()
-          == other.getFitch());
+      result = result && (getPitch()
+          == other.getPitch());
       result = result && (getRoll()
           == other.getRoll());
       result = result && (getYaw()
@@ -284,8 +284,8 @@ public final class A2RControl {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FITCH_FIELD_NUMBER;
-      hash = (53 * hash) + getFitch();
+      hash = (37 * hash) + PITCH_FIELD_NUMBER;
+      hash = (53 * hash) + getPitch();
       hash = (37 * hash) + ROLL_FIELD_NUMBER;
       hash = (53 * hash) + getRoll();
       hash = (37 * hash) + YAW_FIELD_NUMBER;
@@ -427,7 +427,7 @@ public final class A2RControl {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        fitch_ = 0;
+        pitch_ = 0;
 
         roll_ = 0;
 
@@ -463,7 +463,7 @@ public final class A2RControl {
       @java.lang.Override
       public sasa5680.DroneProtoMessages.A2RControl.A2R_Control buildPartial() {
         sasa5680.DroneProtoMessages.A2RControl.A2R_Control result = new sasa5680.DroneProtoMessages.A2RControl.A2R_Control(this);
-        result.fitch_ = fitch_;
+        result.pitch_ = pitch_;
         result.roll_ = roll_;
         result.yaw_ = yaw_;
         result.throttleDir_ = throttleDir_;
@@ -516,8 +516,8 @@ public final class A2RControl {
 
       public Builder mergeFrom(sasa5680.DroneProtoMessages.A2RControl.A2R_Control other) {
         if (other == sasa5680.DroneProtoMessages.A2RControl.A2R_Control.getDefaultInstance()) return this;
-        if (other.getFitch() != 0) {
-          setFitch(other.getFitch());
+        if (other.getPitch() != 0) {
+          setPitch(other.getPitch());
         }
         if (other.getRoll() != 0) {
           setRoll(other.getRoll());
@@ -560,28 +560,28 @@ public final class A2RControl {
         return this;
       }
 
-      private int fitch_ ;
+      private int pitch_ ;
       /**
-       * <code>int32 Fitch = 1;</code>
+       * <code>int32 Pitch = 1;</code>
        */
-      public int getFitch() {
-        return fitch_;
+      public int getPitch() {
+        return pitch_;
       }
       /**
-       * <code>int32 Fitch = 1;</code>
+       * <code>int32 Pitch = 1;</code>
        */
-      public Builder setFitch(int value) {
+      public Builder setPitch(int value) {
         
-        fitch_ = value;
+        pitch_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 Fitch = 1;</code>
+       * <code>int32 Pitch = 1;</code>
        */
-      public Builder clearFitch() {
+      public Builder clearPitch() {
         
-        fitch_ = 0;
+        pitch_ = 0;
         onChanged();
         return this;
       }
@@ -756,7 +756,7 @@ public final class A2RControl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021A2R_Control.proto\"e\n\013A2R_Control\022\r\n\005Fi" +
+      "\n\021A2R_Control.proto\"e\n\013A2R_Control\022\r\n\005Pi" +
       "tch\030\001 \001(\005\022\014\n\004Roll\030\002 \001(\005\022\013\n\003Yaw\030\003 \001(\005\022\024\n\014" +
       "Throttle_dir\030\004 \001(\005\022\026\n\016Throttle_level\030\005 \001" +
       "(\005B\035\n\033sasa5680.DroneProtoMessagesb\006proto" +
@@ -779,7 +779,7 @@ public final class A2RControl {
     internal_static_A2R_Control_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_A2R_Control_descriptor,
-        new java.lang.String[] { "Fitch", "Roll", "Yaw", "ThrottleDir", "ThrottleLevel", });
+        new java.lang.String[] { "Pitch", "Roll", "Yaw", "ThrottleDir", "ThrottleLevel", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

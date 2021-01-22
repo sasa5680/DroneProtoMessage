@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_package = "sasa5680.DroneProtoMessages";
 message A2R_Control{
 
-	int32 Fitch 		= 1;
+	int32 Pitch 		= 1;
 
 	int32 Roll	 	= 2;
 
